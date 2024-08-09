@@ -27,6 +27,6 @@ cd /home/ubuntu/deploy/ai
 
 runNetwork
 
-serviceDown gpt-4o
+serviceDown gpt4o
 
-dokcer-compose up -d --build
+docker-compose up -d --build
