@@ -39,7 +39,7 @@ jobs:
         working-directory: .
         run: |
           mkdir -p deploy-ai
-          cp * deploy-ai
+          cp -r * deploy-ai
 
       - name: S3 업로드 및 CD 요청
         if: ${{ github.ref == 'refs/heads/dev' || github.ref == 'refs/heads/main' }}
