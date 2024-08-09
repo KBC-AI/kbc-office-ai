@@ -3,7 +3,7 @@ version: '3.8'
 services:
   ai:
     build: .
-    container_name: gpt-4o-mini
+    container_name: gpt-4o
     restart: always
     env_file:
       - .env
