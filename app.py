@@ -3,7 +3,7 @@ from openai_api import generate_text
 
 app = Flask(__name__)
 
-@app.route('/generate-text', methods=['POST'])
+@app.route('/chat', methods=['POST'])
 def generate_text_route():
     data = request.get_json()
     prompt = data.get('prompt')
