@@ -24,5 +24,6 @@ serviceDown(){
 }
 
 cd /home/ubuntu/deploy/ai
+runNetwork
 serviceDown gpt-4o-mini
 dokcer-compose up -d --build

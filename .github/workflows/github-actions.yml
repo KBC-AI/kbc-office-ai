@@ -39,7 +39,13 @@ jobs:
         working-directory: .
         run: |
           mkdir -p deploy-ai
-          cp -r * deploy-ai
+          cp ./app.py ./deploy-ai
+          cp ./appspec.yml ./deploy-ai 
+          cp ./docker-compose.yml ./deploy-ai
+          cp ./Dockerfile ./deploy-ai
+          cp ./openai_api.py ./deploy-ai
+          cp ./requirements.txt ./deploy-ai
+          cp ./scripts/* ./deploy-ai
 
       - name: S3 업로드 및 CD 요청
         if: ${{ github.ref == 'refs/heads/dev' || github.ref == 'refs/heads/main' }}
