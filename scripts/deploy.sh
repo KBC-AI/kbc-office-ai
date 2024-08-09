@@ -26,5 +26,5 @@ serviceDown(){
 cd /home/ubuntu/deploy-ai
 mv env .env
 runNetwork
-serviceDown gpt-4o
+serviceDown gpt4o
 docker-compose up -d --build

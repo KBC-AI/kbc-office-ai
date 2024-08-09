@@ -1,9 +1,9 @@
 version: '3.8'
 
 services:
-  ai:
+  gpt:
     build: .
-    container_name: gpt-4o
+    container_name: gpt4o
     restart: on-failure
     env_file:
       - .env

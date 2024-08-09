@@ -1,5 +1,5 @@
 # 베이스 이미지 선택
-FROM python:3.12.4
+FROM python:3.12.4-slim
 
 # 필요한 파일 복사
 COPY . .
