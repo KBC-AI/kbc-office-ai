@@ -16,12 +16,8 @@ jobs:
         python-version: [3.12.4]
 
     steps:
-      - name: 배포 환경 구성
-        working-directory: .
-        run: |
-          echo "${{ secrets.ENV }}" | base64 --decode > .env
 
-      - name: Python 빌드 환경 구성
+      - name: Python 체크 아웃
         uses: actions/checkout@v2
         with:
           python-version: ${{ matrix.python-version }}
@@ -39,6 +35,8 @@ jobs:
         working-directory: .
         run: |
           mkdir -p deploy-ai
+          touch ./deploy-ai/.env
+          echo "${{ secrets.ENV }}" | base64 --decode > ./deploy-ai/.env
           cp ./.env ./deploy-ai
           cp ./app.py ./deploy-ai
           cp ./appspec.yml ./deploy-ai 
