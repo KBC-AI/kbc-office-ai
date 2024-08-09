@@ -4,8 +4,9 @@ import os
 
 load_dotenv()
 client = OpenAI(
-    api_key = os.getenv('OPENAI_API_KEY')
+    api_key=os.getenv('OPENAI_API_KEY')
 )
+
 
 def generate_text(prompt, model_name='gpt-4o-mini'):
     response = client.chat.completions.create(
