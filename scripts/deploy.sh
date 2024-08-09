@@ -10,7 +10,6 @@ runNetwork(){
 }
 
 cd /home/ubuntu/deploy/ai
-
+mv env .env
 runNetwork
-
 docker-compose up -d --build
