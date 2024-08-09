@@ -37,7 +37,6 @@ jobs:
           mkdir -p deploy-ai
           touch ./deploy-ai/.env
           echo "${{ secrets.ENV }}" | base64 --decode > ./deploy-ai/.env
-          cp ./.env ./deploy-ai
           cp ./app.py ./deploy-ai
           cp ./appspec.yml ./deploy-ai 
           cp ./docker-compose.yml ./deploy-ai
