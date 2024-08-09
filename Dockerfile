@@ -5,6 +5,7 @@ FROM python:3.12.4
 COPY . .
 
 # 필요 패키지 설치
+RUN pip install python-dotenv
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Flask 서버 실행

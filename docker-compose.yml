@@ -4,7 +4,7 @@ services:
   ai:
     build: .
     container_name: gpt4o
-    restart: always
+    restart: on-failure
     env_file:
       - .env
     networks:
