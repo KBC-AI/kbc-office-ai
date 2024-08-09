@@ -3,12 +3,14 @@ version: '3.8'
 services:
   ai:
     build: .
-    container_name: gpt4o
+    container_name: gpt-4o
     restart: on-failure
     env_file:
       - .env
     networks:
       - harpsharp
+    expose:
+      - "5001"
 
 networks:
   harpsharp:
